@@ -1,4 +1,6 @@
-# AWS_scalable_web_application_project
+# AWS Scalable Web Application Project
+
+# GRADUTION PROJECT FOR MANARA PROGRAM FOR AWS SAA C-03
 
 ##  Project Overview
 
