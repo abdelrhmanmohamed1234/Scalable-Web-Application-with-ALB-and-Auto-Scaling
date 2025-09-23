@@ -1,6 +1,6 @@
-# AWS Scalable Web Application Project
 
 # GRADUTION PROJECT FOR MANARA PROGRAM FOR AWS SAA C-03
+# AWS Scalable Web Application Project
 
 ##  Project Overview
 
@@ -8,7 +8,7 @@ This project demonstrates the deployment of a scalable and highly available web 
 
 ---
 
-##  Architecture
+##  Project Architecture
 
 **Type**: EC2-based
 
@@ -17,7 +17,7 @@ The architecture includes the following core components:
 - **Amazon EC2**: Hosts the web application on virtual servers.
 - **Application Load Balancer (ALB)**: Routes traffic evenly across EC2 instances.
 - **Auto Scaling Group (ASG)**: Automatically adds/removes EC2 instances based on load.
-- **Amazon RDS (optional)**: Provides a managed relational database service (MySQL/PostgreSQL).
+- **Amazon RDS  _**: Provides a managed relational database service (MySQL/PostgreSQL).
 - **IAM Roles**: Secure access to AWS services for EC2 and other components.
 - **CloudWatch + SNS**: Logs, monitors, and sends notifications based on metrics.
 
@@ -31,7 +31,7 @@ The architecture includes the following core components:
 
 ##  Deployment Steps
 
-> You can deploy the infrastructure manually via the AWS Console or use Infrastructure as Code (e.g., Terraform or CloudFormation).
+> I deploy the infrastructure manually via the AWS Console BUT can use Infrastructure as Code ( Terraform or CloudFormation).
 
 ### 1. Launch EC2 Instances
 - Choose Amazon Linux 2 or Ubuntu
@@ -44,17 +44,17 @@ The architecture includes the following core components:
 
 ### 3. Configure Auto Scaling Group
 - Attach it to the ALB target group
-- Set scaling policies (CPU > 60% → scale out)
+- Set scaling policies (CPU > 70% → scale out)
 
-### 4. (Optional) Launch RDS Database
+### 4. Launch RDS Database
 - Multi-AZ deployment
 - Connect from EC2 instances using internal endpoint
 
 ### 5. Set IAM Roles
-- Assign roles to EC2 for access to logs, S3, etc.
+- Assign roles to EC2 for access to logs, S3.
 
 ### 6. Enable CloudWatch & SNS
-- Set alarms for metrics like CPUUtilization
+- Set alarms for metrics like CPU Utilization
 - Send alerts to email via SNS topic
 
 ---
@@ -67,7 +67,7 @@ The architecture includes the following core components:
 | ALB             | Distributes traffic               |
 | ASG             | Handles scalability               |
 | Amazon RDS      | Backend database (optional)       |
-| IAM             | Access control                    |
+| IAM             | Users and Access control          |
 | CloudWatch      | Monitoring and logging            |
 | SNS             | Notifications                     |
 
